@@ -67,6 +67,114 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-关于python测试脚本的编写" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/14/%E5%85%B3%E4%BA%8Epython%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99/" class="article-date">
+  <time datetime="2020-09-13T17:33:02.000Z" itemprop="datePublished">2020-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/14/%E5%85%B3%E4%BA%8Epython%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99/">关于python测试脚本的编写</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><pre><code>def f(n):
+&quot;&quot;&quot;
+&gt;&gt;&gt;f(1)
+1用例
+&gt;&gt;&gt;f(2）
+2用例
+......
+&gt;&gt;&gt;f(n)
+n用例
+
+&quot;&quot;&quot;
+print(n)
+if __name__ == &quot;__main__&quot;
+import doctest
+doctest.testmod()
+
+
+from widget import widget
+import unittest
+
+#执行测试用例的类
+    class widgetTestCase(unittest.TestCase)
+
+    def setUp(self):
+        self.widget = widget()
+    def tearDown(self):
+        self.widget.dispose()
+        self.widget = None
+    def testSize(self):
+        self.assertEqual(self, widget.getSize(),(40,40))
+    def testResize(self):
+        self.widget.resize(100,100)
+        self.assertEqual(self, widget.getSize(), (100,100))
+#测试
+if __name__ = &quot;__main__&quot;:
+
+构造测试集
+
+1 suit = unittest.TestSuite()
+2 suit.addTest(widgetTestCase(&quot;testSize&quot;))
+3 suit.addTest(widgetTestCase(&quot;testResize&quot;))
+
+执行测试
+
+1 runner = unittest.TextTestRunner()
+2 runner.run(suite)
+
+
+1&gt;构造TestCase
+
+setup和teardown负责预处理和善后工作
+
+2&gt;构造测试用例集，添加用例
+
+3&gt;执行用例说明测试方法，N多测试函数
+
+TestCase.assert_(expr[, msg]) 
+TestCase.failUnless(expr[, msg]) 
+TestCase.assertTrue(expr[, msg]) 
+TestCase.assertEqual(first, second[, msg]) 
+TestCase.failUnlessEqual(first, second[, msg]) 
+TestCase.assertNotEqual(first, second[, msg]) 
+TestCase.failIfEqual(first, second[, msg]) 
+TestCase.assertAlmostEqual(first, second[, places[, msg]]) 
+TestCase.failUnlessAlmostEqual(first, second[, places[, msg]]) 
+TestCase.assertNotAlmostEqual(first, second[, places[, msg]]) 
+TestCase.failIfAlmostEqual(first, second[, places[, msg]]) 
+TestCase.assertRaises(exception, callable, ...) 
+TestCase.failUnlessRaises(exception, callable, ...) 
+TestCase.failIf(expr[, msg]) 
+TestCase.assertFalse(expr[, msg]) 
+TestCase.fail([msg])</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/09/14/%E5%85%B3%E4%BA%8Epython%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99/" data-id="ckf1ekkvq0000nso084w989cx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-我的第一篇博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="article-date">
@@ -95,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ckf1cz32t0001lgo01fwec3tl" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" data-id="ckf1cu7ov0000k8o04bp26syg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -144,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/13/hello-world/" data-id="ckf1cz32c0000lgo0gxze2wma" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2020/09/13/hello-world/" data-id="ckf10bril0000z8o0asdhbr7l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,6 +291,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/09/14/%E5%85%B3%E4%BA%8Epython%E6%B5%8B%E8%AF%95%E8%84%9A%E6%9C%AC%E7%9A%84%E7%BC%96%E5%86%99/">关于python测试脚本的编写</a>
+          </li>
         
           <li>
             <a href="/2020/09/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
